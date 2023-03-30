@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminLTE3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar z-5 navbar-expand-lg ml-3">
+    <div class="container-fluid">
+      <a class="navbar-brand text-primary" href="#"><i class="fa-solid fa-bars"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse align-items-center justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <span class="navlink me-3" href="#">Home </span>
+          </li>
+          <li class="nav-item">
+            <span class="navlink" href="#">Contact</span>
+          </li>
+        </ul>
+        <ul type="none" class="d-flex align-items-center">
+          <li><i class="fa-solid fa-magnifying-glass p-3"></i></li>
+          <li class="position-relative">
+            <i class="fa-regular fa-comments p-3"></i>
+            <span class="position-absolute  translate-middle badge rounded-pill bg-danger" style="top: 11px; left: 40px;">
+              10
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </li>
+          <li><i class="fa-regular fa-bell p-3"></i></li>
+          <li><i class="fa-solid fa-maximize p-3"></i></li>
+          <li><button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Theme</button></li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+<!------------------------------------------Side bar------------------------------------------------->
+<div class="sidebar-sticky sidebar" style="width: 300px;">
+  <div class="bg-dark pe-2 ps-2">
+    <div class="sticky-top bg-dark offcanvas-header border-secondary-subtle border-bottom p-3">
+      <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+        <img src="./images/AdminLTELogo.webp" alt="" class="ms-1 me-2" height="33px" width="33px">
+        <span class="text-white border-light " style="font-weight: normal;">AdminLTE3</span>
+      </h5>
+      <i class="fa-solid fa-xmark text-light sidebar-hide"></i>
+    </div>
+    <div class="offcanvas-body">
+      <div class="border-secondary-subtle border-bottom p-3 pb-2">
+        <h5 class="d-flex align-items-center" id="">
+          <img src="./images/user2-160x160.jpg" alt="" class="ms-1 me-2 rounded-5" height="33px" width="33px">
+          <span class="text-white" style="font-weight: normal; font-size: 16px;">Alexander Pierce</span>
+        </h5>
+      </div>
+      <div class="mt-3">
+        <form class="d-flex" role="search">
+          <input class="form-control rounded-0 rounded-start" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn bg-white rounded-0 rounded-end" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>        
+      </div>
+<!-----------------------------------------Dashboards------------------------------------------------>
+      <div class="offcanvas-header curser-pointer border-secondary-subtle p-2 bg-primary rounded-1 mt-2 position-relative">
+        <h5 class="offcanvas-title d-flex align-items-center ps-2 pe-1" id="offcanvasExampleLabel">
+          <i class="fa-solid fa-gauge text-white me-2"></i>
+          <span class="text-white" style="font-weight: normal; font-size: 16px;">
+            Dashboard <i class="fa-solid fa-chevron-left text-white dash-arrow position-absolute end-0 pe-3 pt-1"></i>
+          </span>
+        </h5>
+      </div>
+      <div class="dash-boards">
+        <div class="offcanvas-header curser-pointer border-secondary-subtle p-2 bg-white rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Dashboard v1</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle p-2 rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle text-white me-2"></i>
+            <span class="text-white" style="font-weight: normal; font-size: 16px;">Dashboard v2</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle p-2 rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle text-white me-2"></i>
+            <span class="text-white" style="font-weight: normal; font-size: 16px;">Dashboard v3</span>
+          </h5>
+        </div>
+      </div>
+<!-------------------------------------------Widgets------------------------------------------------->
+        <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+          <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <img src="./images/category.png" class="ms-2 me-2 text-white" alt="" height="20px" width="20px">
+              <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+                Widgets
+                <span class="position-absolute end-0 me-3 mt-1 badge bg-danger">
+                  New
+                </span> 
+              </p>
+          </div>
+        </div>
+<!----------------------------------------Layout options--------------------------------------------->
+        <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+          <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-solid fa-copy ms-2 me-2 h5"></i>
+              <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+                Layout Options
+                <i class="fa-solid fa-chevron-left text-white layout-arrow position-absolute end-0 pt-1 me-2"></i>
+                <span class="position-absolute end-0 me-4 badge bg-info">
+                  6
+                </span>
+              </p>
+          </div>
+        </div>
+        <div class="layout-slide">
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Top Navigation</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Top Navigation + Sidebar</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Boxed</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Fixed Sidebar</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Fixed Sidebar + Custom area</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Fixed Navbar</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Fixed Footer</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Collapsed Sidebar</span>
+            </h5>
+          </div>
+        </div>
+<!---------------------------------------------Charts------------------------------------------------>
+        <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+          <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-solid fa-chart-pie ms-2 me-2" style="font-size: 20px;"></i>
+              <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+                Charts
+                <i class="fa-solid fa-chevron-left text-white charts-arrow position-absolute end-0 pt-1 me-2"></i>
+              </p>
+          </div>
+        </div>
+        <div class="charts-slide">
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">ChartJS</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Flot</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Inline</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">uPlot</span>
+            </h5>
+          </div>
+        </div>
+<!-------------------------------------------UI elements--------------------------------------------->
+        <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+          <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-solid fa-tree ms-2 me-3" style="font-size: 20px;"></i>
+              <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+                UI Elements
+                <i class="fa-solid fa-chevron-left text-white UI-arrow position-absolute end-0 pt-1 me-2"></i>
+              </p>
+          </div>
+        </div>
+        <div class="UI-slide">
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">General</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Icons</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Buttons</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Sliders</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Modals & Alerts</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Navbar & Tabs</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Timeline</span>
+            </h5>
+          </div>
+          <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+              <i class="fa-regular fa-circle me-2"></i>
+              <span style="font-weight: normal; font-size: 16px;">Ribbons</span>
+            </h5>
+          </div>
+        </div>
+<!----------------------------------------------Forms------------------------------------------------>
+      <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+        <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+          <i class="fa-solid fa-pen-to-square ms-2 me-3" style="font-size: 20px;"></i> 
+            <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+              Forms
+              <i class="fa-solid fa-chevron-left text-white forms-arrow position-absolute end-0 pt-1 me-2"></i>
+            </p>
+        </div>
+      </div>
+      <div class="forms-slide">
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">General Elements</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Advanced Elements</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Editors</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Validation</span>
+          </h5>
+        </div>
+      </div>
+<!----------------------------------------------Tables----------------------------------------------->
+      <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+        <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+          <i class="fa-solid fa-table ms-2 me-3" style="font-size: 20px;"></i> 
+            <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+              Tables
+              <i class="fa-solid fa-chevron-left text-white tables-arrow position-absolute end-0 pt-1 me-2"></i>
+            </p>
+        </div>
+      </div>
+      <div class="tables-slide">
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Simple Tables</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">DataTables</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">jsGrid</span>
+          </h5>
+        </div>
+      </div>
+<!---------------------------------------------EXAMPLES---------------------------------------------->
+      <h6 class="pt-3" style="color: #989ca3;">EXAMPLES</h6>
+      <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+        <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+          <i class="fa-solid fa-calendar-days ms-2 me-3" style="font-size: 20px;"></i> 
+            <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+              Calendar
+              <span class="position-absolute end-0 me-4 badge bg-info">
+                2
+              </span>
+            </p>
+        </div>
+      </div>
+<!---------------------------------------------Gallary----------------------------------------------->
+      <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+        <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+          <i class="fa-solid fa-image ms-2 me-3" style="font-size: 20px;"></i> 
+            <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+              Gallary
+            </p>
+        </div>
+      </div>
+<!------------------------------------------Kanban Board--------------------------------------------->
+      <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+        <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+          <i class="fa-solid fa-table-columns ms-2 me-3" style="font-size: 20px;"></i> 
+            <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+              Kanban Board
+            </p>
+        </div>
+      </div>
+<!---------------------------------------------Mailbox----------------------------------------------->
+      <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+        <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+          <i class="fa-regular fa-envelope ms-2 me-3" style="font-size: 20px;"></i> 
+            <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+              Mailbox
+              <i class="fa-solid fa-chevron-left text-white mailbox-arrow position-absolute end-0 pt-1 me-2"></i>
+            </p>
+        </div>
+      </div>
+      <div class="mail  lide">
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Inbox</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Compose</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Read</span>
+          </h5>
+        </div>
+      </div>
+<!---------------------------------------------Pages------------------------------------------------->
+      <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+        <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+          <i class="fa-solid fa-book ms-2 me-3" style="font-size: 20px;"></i> 
+            <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+              Pages
+              <i class="fa-solid fa-chevron-left text-white pages-arrow position-absolute end-0 pt-1 me-2"></i>
+            </p>
+        </div>
+      </div>
+      <div class="pages-slide">
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Invoice</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Profile</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">E-commerce</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Projects</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Project Add</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Project Edit</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Project Detail</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Contacts</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">FAQ</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Contact us</span>
+          </h5>
+        </div>
+      </div>
+<!---------------------------------------------Extras------------------------------------------------->
+      <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+        <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+          <i class="fa-regular fa-square-plus ms-2 me-3" style="font-size: 20px;"></i> 
+            <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+              Extras
+              <i class="fa-solid fa-chevron-left text-white extras-arrow position-absolute end-0 pt-1 me-2"></i>
+            </p>
+        </div>
+      </div>
+      <div class="extras-slide">
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Login & Register v1</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Login & Register v2</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Lockscreen</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Legacy User Menu</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Launguage Menu</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Error 404</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Error 500</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Pace</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Blank Page</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Starter Page</span>
+          </h5>
+        </div>
+      </div>
+<!---------------------------------------------Search------------------------------------------------->
+      <div id="menu-bg" class="offcanvas-header curser-pointer position-relative border-secondary-subtle p-2 text-light rounded-1 mt-2">
+        <div class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+          <i class="fa-solid fa-magnifying-glass ms-2 me-3" style="font-size: 20px;"></i> 
+            <p style="font-weight: normal; font-size: 16px;" class="mb-0">
+              Search
+              <i class="fa-solid fa-chevron-left text-white search-arrow position-absolute end-0 pt-1 me-2"></i>
+            </p>
+        </div>
+      </div>
+      <div class="search-slide">
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Simple Search</span>
+          </h5>
+        </div>
+        <div id="menu-bg" class="offcanvas-header curser-pointer border-secondary-subtle ms-2 p-2 text-light rounded-1 mt-2">
+          <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasExampleLabel">
+            <i class="fa-regular fa-circle me-2"></i>
+            <span style="font-weight: normal; font-size: 16px;">Enhanced</span>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------Side over---------------------------------------------->
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="row">
+      <button class="rounded-circle bg-dark dark-circle border border-primary" style="height: 30px; width: 30px;"></button>
+      <button class="ms-2 rounded-circle bg-light white-circle border border-primary " style="height: 30px; width: 30px;"></button>
+    </div>
+  </div>
+</div>
+
+<!-----------------------------------------right bar--------------------------------------------->
+
+    <div class="p-3 d-flex justify-content-between align-items-center">
+      <h2 class="">Dashboard</h2>
+      <div>
+        <a href="#">Home</a>
+        <a> / Dashboard v1</a>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 col-lg-3">
+          <div class="rounded-1 bg-info text-light position-relative mb-2">
+            <div class="p-2">
+              <h2 class="fw-bolder">150</h2>
+              <p>New Orders</p>
+            </div>
+            <div class="p-1 rounded-bottom-1 text-center" style="background-color: #1591a5; color: #1591a5;">
+              <i class="fa-solid fa-bag-shopping p-3 position-absolute top-0 end-0" style="font-size: 60px;"></i>
+              <h6 class="m-0 text-light">More info <i class="fa-solid fa-circle-arrow-right"></i></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="rounded-1 bg-success text-light position-relative mb-2">
+            <div class="p-2">
+              <h2 class="fw-bolder">53<sup>%</sup></h2>
+              <p>Bounce Rate</p>
+            </div>
+            <div class="p-1 rounded-bottom-1 text-center" style="background-color: #24963e; color: #24963e;">
+              <i class="fa-solid fa-chart-simple p-3 position-absolute top-0 end-0" style="font-size: 60px;"></i>
+              <h6 class="m-0 text-light">More info <i class="fa-solid fa-circle-arrow-right"></i></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="rounded-1 bg-warning text-black position-relative mb-2">
+            <div class="p-2">
+              <h2 class="fw-bolder">44</h2>
+              <p>User Registrations</p>
+            </div>
+            <div class="p-1 rounded-bottom-1 text-center" style="background-color: #e5ad06; color: #e5ad06;">
+              <i class="fa-solid fa-user-plus p-3 position-absolute top-0 end-0" style="font-size: 60px;"></i>
+              <h6 class="m-0 text-light">More info <i class="fa-solid fa-circle-arrow-right"></i></h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="rounded-1 bg-danger text-light position-relative mb-2">
+            <div class="p-2">
+              <h2 class="fw-bolder">65</h2>
+              <p>Unique Visitors</p>
+            </div>
+            <div class="p-1 rounded-bottom-1 text-center" style="background-color: #c6303e; color: #c6303e;">
+              <i class="fa-solid fa-chart-pie p-3 position-absolute top-0 end-0" style="font-size: 60px;"></i>
+              <h6 class="m-0 text-light">More info <i class="fa-solid fa-circle-arrow-right"></i></h6>
+            </div>
+          </div>
+        </div>
+        <h5>Info box</h5>
+        <div class="col-6 col-lg-3">
+          <div class="rounded-1 bg-danger text-light mb-2">
+            <div class="d-flex p-2 bg-light">
+              <div class="rounded-1 bg-info d-flex justify-content-center align-content-center" style="width: 70px; font-size: 30px;">
+                <i class="fa-sharp fa-regular fa-envelope p-3" ></i>
+              </div>
+              <div class="text-black ps-3 pt-1">
+                <span class="">Message</span>
+                <h6 class="pt-2">1,410</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="rounded-1  bg-danger text-light mb-2">
+            <div class="d-flex p-2 shadow-sm bg-light">
+              <div class="rounded-1 bg-success d-flex justify-content-center align-content-center" style="width: 70px; font-size: 30px;">
+                <i class="fa-regular fa-flag p-3"></i>
+              </div>
+              <div class="text-black ps-3 pt-1">
+                <span>Bookmarks</span>
+                <h6 class="pt-2">410</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="rounded-1 bg-danger text-light mb-2">
+            <div class="d-flex p-2 bg-light shadow">
+              <div class="rounded-1 bg-warning d-flex justify-content-center align-content-center" style="width: 70px; font-size: 30px;">
+                <i class="fa-solid fa-copy p-3"></i>
+              </div>
+              <div class="text-black ps-3 pt-1">
+                <span class="">Uploads</span>
+                <h6 class="pt-2">13,648</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="rounded-1 bg-danger text-light mb-2">
+            <div class="d-flex p-2 bg-light shadow-lg">
+              <div class="rounded-1 bg-danger d-flex justify-content-center align-content-center" style="width: 70px; font-size: 30px;">
+                <i class="fa-regular fa-star p-3"></i>              
+              </div>
+              <div class="text-black ps-3 pt-1">
+                <span class="">Likes</span>
+                <h6 class="pt-2">93,139</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-------------------------------------------------sales-------------------------------------------->
+  
+<!---------------------------------------------Direct Chat------------------------------------------>
+<div class="d-flex">
+  <div class="container-fluid">
+    <div class="row">
+      
+<!-----------------------------------card-3------------------------------------->
+      <div class="col-md-6">
+        <div class="card direct-chat-1 justify-content-between text-black mt-3 ">
+          <div class="card-header bg-warning  d-flex align-items-center justify-content-between border-bottom">
+            <h6 class="m-0">Direct chat</h6>
+            <div>
+              <span class="badge rounded-2 bg-danger">
+                3
+              </span>
+              <i class="fa-solid fa-minus minus-1 p-2"></i>
+              <i class="fa-solid fa-comments p-2 comment-1"></i>
+              <i class="fa-solid fa-xmark cross-mark-1 p-2"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="direct-chat-con-1">
+              <div class="position-relative">
+                <div style="height: 250px; overflow-y: scroll;">
+                  <div class="d-flex justify-content-between pe-3">
+                    <h6>Alexander Pierce</h6>
+                    <h6>23 Jan 2:00 pm</h6>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="./images/user1-128x128.jpeg" alt="" class="rounded-circle" height="40px">
+                    <div class="ms-1 rounded-2 w-100 ps-3 pt-2">
+                      <h6>Is this template really for free? That's unbelievable!</h6>
+                    </div>
+                  </div>
+                  <!-- ---------------------------------------------------------- -->
+                  <div class="pt-2 d-flex justify-content-between pe-3">
+                    <h6>23 Jan 2:05 pm</h6>
+                    <h6>Sarah Bullock</h6>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="ms-3 me-3 rounded-2 w-100 ps-3 pt-2 bg-warning text-light">
+                      <h6>You better believe it!</h6>
+                    </div>
+                    <img src="./images/user3-128x128.jpeg" alt="" class="rounded-circle me-2" height="40px">
+                  </div>
+                  <!-- ------------------------------------------ -->
+                  <div class="pt-2 d-flex justify-content-between pe-3">
+                    <h6>Alexander Pierce</h6>
+                    <h6>23 Jan 2:00 pm</h6>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="./images/user1-128x128.jpeg" alt="" class="rounded-circle" height="40px">
+                    <div class="ms-1 me-3 rounded-2 w-100 ps-3 pt-2">
+                      <h6>Working with AdminLTE on a great new app! Wanna join?</h6>
+                    </div>
+                  </div>
+                  <!-- ---------------------------------------------------------- -->
+                  <div class="pt-2 d-flex justify-content-between pe-3">
+                    <h6>23 Jan 2:05 pm</h6>
+                    <h6>Sarah Bullock</h6>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="ms-3 me-3 rounded-2 w-100 ps-3 pt-2 bg-warning text-light">
+                      <h6>I would love to.</h6>
+                    </div>
+                    <img src="./images/user3-128x128.jpeg" alt="" class="rounded-circle me-2" height="40px">
+                  </div>
+                </div>
+                <ul class="comment-box-1 position-absolute p-0 top-0 h-100 w-100 bg-dark" type="none">
+                  <li class="mt-3 ps-3 pb-2" style="border-bottom: 1px solid #2a2e33;">
+                    <a href="#" class="nav-link d-flex">
+                        <img src="./images/user1-128x128.jpeg" alt="" class=" rounded-5" height="40px" width="40px">
+                      <div class="text-light ms-2 w-100">
+                        <span class="d-flex justify-content-between fw-bold">
+                          Count Dracula
+                            <span style="font-size: 11px; font-weight: normal;">2/28/2015</span>
+                        </span>
+                        <div>How have you been? I was...</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer mt-3">
+            <form class="d-flex pt-2" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button> 
+            </form>
+          </div>
+        </div>
+      </div>
+<!-----------------------------------card-4---------------------------------------->
+      <div class="col-md-6">
+        <div class="card direct-chat-2 justify-content-between text-black mt-3 ">
+          <div class="card-header bg-danger text-light d-flex align-items-center justify-content-between border-bottom">
+            <h6 class="m-0">Direct chat</h6>
+            <div>
+              <span class="badge rounded-2 bg-danger">
+                3
+              </span>
+              <i class="fa-solid fa-minus minus-2 p-2"></i>
+              <i class="fa-solid fa-comments p-2 comment-2"></i>
+              <i class="fa-solid fa-xmark cross-mark-2 p-2"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="direct-chat-con-2">
+              <div class="position-relative">
+                <div style="height: 250px; overflow-y: scroll;">
+                  <div class="d-flex justify-content-between pe-3">
+                    <h6>Alexander Pierce</h6>
+                    <h6>23 Jan 2:00 pm</h6>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="./images/user1-128x128.jpeg" alt="" class="rounded-circle" height="40px">
+                    <div class="ms-1 rounded-2 w-100 ps-3 pt-2">
+                      <h6>Is this template really for free? That's unbelievable!</h6>
+                    </div>
+                  </div>
+                  <!-- ---------------------------------------------------------- -->
+                  <div class="pt-2 d-flex justify-content-between pe-3">
+                    <h6>23 Jan 2:05 pm</h6>
+                    <h6>Sarah Bullock</h6>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="ms-3 me-3 rounded-2 w-100 ps-3 pt-2 bg-danger text-light">
+                      <h6>You better believe it!</h6>
+                    </div>
+                    <img src="./images/user3-128x128.jpeg" alt="" class="rounded-circle me-2" height="40px">
+                  </div>
+                  <!-- ------------------------------------------ -->
+                  <div class="pt-2 d-flex justify-content-between pe-3">
+                    <h6>Alexander Pierce</h6>
+                    <h6>23 Jan 2:00 pm</h6>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <img src="./images/user1-128x128.jpeg" alt="" class="rounded-circle" height="40px">
+                    <div class="ms-1 me-3 rounded-2 w-100 ps-3 pt-2">
+                      <h6>Working with AdminLTE on a great new app! Wanna join?</h6>
+                    </div>
+                  </div>
+                  <!-- ---------------------------------------------------------- -->
+                  <div class="pt-2 d-flex justify-content-between pe-3">
+                    <h6>23 Jan 2:05 pm</h6>
+                    <h6>Sarah Bullock</h6>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="ms-3 me-3 rounded-2 w-100 ps-3 pt-2 bg-danger text-light">
+                      <h6>I would love to.</h6>
+                    </div>
+                    <img src="./images/user3-128x128.jpeg" alt="" class="rounded-circle me-2" height="40px">
+                  </div>
+                </div>
+                <ul class="comment-box-2 position-absolute p-0 top-0 h-100 w-100 bg-dark" type="none">
+                  <li class="mt-3 ps-3 pb-2" style="border-bottom: 1px solid #2a2e33;">
+                    <a href="#" class="nav-link d-flex">
+                        <img src="./images/user1-128x128.jpeg" alt="" class=" rounded-5" height="40px" width="40px">
+                      <div class="text-light ms-2 w-100">
+                        <span class="d-flex justify-content-between fw-bold">
+                          Count Dracula
+                            <span style="font-size: 11px; font-weight: normal;">2/28/2015</span>
+                        </span>
+                        <div>How have you been? I was...</div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer mt-3">
+            <form class="d-flex pt-2" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button> 
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="mt-3 mb-3">
+    <h4>Progress bar</h4>
+      <div class="progress mb-4" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 25%"></div>
+      </div>
+      <div class="progress mb-4" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 50%"></div>
+      </div>
+      <div class="progress mb-4" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 75%"></div>
+      </div>
+      <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 100%"></div>
+      </div>
+  </div>
+  <div class="mb-4">
+    <button type="button" id="btn" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>        
+    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+      Popover on top
+    </button>
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="liveToast" class="toast bg-black" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header bg-black text-light" style="font-size: 15px;">
+          <img src="./images/instagram_PNG9.png" height="25px" width="25px" class="rounded me-2 insta" alt="...">
+          <strong class="me-auto">Instagram</strong>
+          <small>11 mins ago</small>
+          <button type="button" class="btn-close text-light" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body d-flex text-light bg-black ms-3">
+          <img src="./images/user7-128x128.jpeg" height="25px" width="25px" class="rounded me-2" alt="...">
+          <div>
+            <h6 class="me-auto">Sara Doe</h6>
+            <h6 style="font-weight: normal;">Hello ❤️</h6>
+            <h6 class="curser-pointer reply">Replay...</h6>
+            <input type="text">
+            <i class="bi bi-send-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------------------------------------------to do list----------------------------------------->
+<!-----------------------------------------------General form--------------------------------------------->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card box-shadow border border-dark-subtle p-0 rounded-3">
+        <div class="card-header bg-primary"> 
+          <h5 class="text-light m-0 rounded-top-3">Quick Example</h5>
+        </div>
+        <div class="card-body border-1 border-dark">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+            <input class="form-control" type="password" placeholder="Password" id="exampleFormControlTextarea1" rows="3">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card box-shadow border border-dark-subtle p-0 rounded-3">
+        <div class="card-header bg-primary"> 
+          <h5 class="text-light m-0 rounded-top-3">Quick Example</h5>
+        </div>
+        <div class="card-body border-1 border-dark">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Email">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+            <input class="form-control" type="password" placeholder="Password" id="exampleFormControlTextarea1" rows="3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!----------------------------------------------------social widgets-------------------------------------------------->
+<div class="container-fluid">
+  <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="card rounded-2">
+          <div class="bg-warning rounded-top-2 d-flex text-light p-3 align-items-center">
+            <div>
+              <img src="./images/user7-128x128.jpeg" alt="" height="65px" width="65px" class="rounded-circle box-shadow">
+            </div>
+            <div class="text-dark ps-3">
+              <h5 class="pb-1" style="font-weight: normal; font-size: 25px;">Nadia Carmichael</h5>
+              <h6 class="" style="font-size: 20px;">Lead Developer</h6>
+            </div>
+          </div>
+          <div class="box-shadow card-footer p-0">
+            <ul class="p-0 text-primary" type="none">
+              <li class="pt-2 ps-3 pe-3 d-flex justify-content-between align-items-center pb-2 border-bottom">
+                Projects
+                <span class=" badge justify-content-end rounded-2 bg-primary">
+                  31
+                </span>
+              </li>
+              <li class="pt-2 ps-3 pe-3 d-flex justify-content-between align-items-center pb-2 border-bottom">
+                Tasks
+                <span class=" badge justify-content-end rounded-2 bg-info">
+                  5
+                </span>
+              </li>
+              <li class="pt-2 ps-3 pe-3 d-flex justify-content-between align-items-center pb-2 border-bottom">
+                Completed Projects
+                <span class=" badge justify-content-end rounded-2 bg-success">
+                  31
+                </span>
+              </li>
+              <li class="pt-2 ps-3 pe-3 d-flex justify-content-between align-items-center">
+                Followers
+                <span class=" badge justify-content-end rounded-2 bg-danger">
+                  842
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card rounded-2 text-black">
+          <div class="bg-info rounded-top-2 text-light pt-3 pb-5">
+            <h5 class="text-center" style="font-weight: normal; font-size: 25px;">Akexander Pierce</h5>
+            <h6 class="text-center" style="font-size: 20px;">Founder & CEO</h6>
+          </div>
+          <div class="position-absolute d-flex justify-content-center start-0 end-0" style="top: 85px;">
+            <img src="./images/user1-128x128.jpeg" height="90px" width="90px" alt="" class=" border border-4 border-light rounded-circle">
+          </div>
+          <div class="box-shadow card-footer pt-5 ps-3 text-center">
+            <div class="row pt-3 pb-3">
+              <div class="col-sm-4 border-end" style="font-size: 16px;">
+                <h6>3200</h6>
+                <span>SALES</span>
+              </div>
+              <div class="col-sm-4 border-end" style="font-size: 16px;">
+                <h6>13,000</h6>
+                <span>FOLLOWERS</span>
+              </div>
+              <div class="col-sm-4" style="font-size: 16px;">
+                <h6>35</h6>
+                <span>PRODUCTS</span>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-black">
+          <div class="bg-info text-light p-3 pb-5 rounded-top-2 card-2">
+            <h3 class="text-end">Elizabeth Pierce</h3>
+            <h5 class="text-end">Web Designer</h5>
+          </div>
+          <div class="position-absolute d-flex justify-content-center start-0 end-0" style="top: 83px;">
+            <img src="./images/user3-128x128.jpeg" height="90px" width="90px" alt="" class=" border border-4 border-light rounded-circle">
+          </div>
+          <div class="box-shadow card-footer pt-5 ps-3 text-center">
+            <div class="row pt-3 pb-3">
+              <div class="col-sm-4 border-end" style="font-size: 16px;">
+                <h6>3200</h6>
+                <span>SALES</span>
+              </div>
+              <div class="col-sm-4 border-end" style="font-size: 16px;">
+                <h6>13,000</h6>
+                <span>FOLLOWERS</span>
+              </div>
+              <div class="col-sm-4" style="font-size: 16px;">
+                <h6>35</h6>
+                <span>PRODUCTS</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>  
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card text-black rounded-1 mt-3 mb-3 to-do-list">
+        <div class="card-header d-flex align-items-center justify-content-between border-bottom border-dark">
+          <span class="m-0"><i class="fa-solid fa-clipboard-list"></i> To Do List</span>
+            <ul class="pagination pt-2 mb-2">
+              <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+              </li>
+            </ul>
+        </div>
+      <!-- ----------------------------------------->
+        <div class="card-body bg-secondary-subtle">
+          <div class="d-flex align-items-center mt-3 me-3 p-2 border-start">
+            <div class="ps-2 d-flex justify-content-between pe-3" style="font-size: 18px;">
+              <span>
+                <i class="fa-solid fa-ellipsis-vertical"></i> <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+            </div>
+            <div class="d-flex align-items-center" style="font-size: 15px;">
+              <input class="form-check-input rounded-0 p-2 check-1" type="checkbox" value="" aria-label="Checkbox for following text input">
+              <span class="ms-2 fw-bolder">Design a nice theme</span>
+              <span class="badge rounded-1 bg-danger ms-3">
+                <i class="fa-regular fa-clock"></i> 2 mins
+              </span>
+            </div>
+          </div>
+          <!-- ---------------------------------- -->
+          <div class="d-flex align-items-center mt-1 me-3 p-2 border-start">
+            <div class="ps-2 d-flex justify-content-between pe-3" style="font-size: 18px;">
+              <span>
+                <i class="fa-solid fa-ellipsis-vertical"></i> <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+            </div>
+            <div class="d-flex align-items-center" style="font-size: 15px;">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+              <span class="ms-2 text-decoration-line-through">Make the theme responsive</span>
+              <span class="badge rounded-1 bg-dark-subtle ms-3">
+                <i class="fa-regular fa-clock"></i> 4 hours
+              </span>
+            </div>
+          </div>
+          <!-- ------------------------------- -->
+          <div class="d-flex align-items-center mt-1 me-3 p-2 border-start">
+            <div class="ps-2 d-flex justify-content-between pe-3" style="font-size: 18px;">
+              <span>
+                <i class="fa-solid fa-ellipsis-vertical"></i> <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+            </div>
+            <div class="d-flex align-items-center" style="font-size: 15px;">
+              <input class="form-check-input rounded-0 p-2" type="checkbox" value="" aria-label="Checkbox for following text input">
+              <span class="ms-2 fw-bolder">Let theme shine like a star</span>
+              <span class="badge rounded-1 bg-warning text-dark ms-3">
+                <i class="fa-regular fa-clock"></i> 1 day
+              </span>
+            </div>
+          </div>
+          <!-- ---------------------------------------------------------- -->
+          <div class="d-flex align-items-center mt-1 me-3 p-2 border-start">
+            <div class="ps-2 d-flex justify-content-between pe-3" style="font-size: 18px;">
+              <span>
+                <i class="fa-solid fa-ellipsis-vertical"></i> <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+            </div>
+            <div class="d-flex align-items-center" style="font-size: 15px;">
+              <input class="form-check-input rounded-0 p-2" type="checkbox" value="" aria-label="Checkbox for following text input">
+              <span class="ms-2 fw-bolder">Let theme shine like a star</span>
+              <span class="badge rounded-1 bg-success ms-3">
+                <i class="fa-regular fa-clock"></i> 3 days
+              </span>
+            </div>
+          </div>
+          <!-- ----------------------------------------- -->
+          <div class="d-flex align-items-center mt-1 me-3 p-2 border-start">
+            <div class="ps-2 d-flex justify-content-between pe-3" style="font-size: 18px;">
+              <span>
+                <i class="fa-solid fa-ellipsis-vertical"></i> <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+            </div>
+            <div class="d-flex align-items-center" style="font-size: 15px;">
+              <input class="form-check-input rounded-0 p-2" type="checkbox" value="" aria-label="Checkbox for following text input">
+              <span class="ms-2 fw-bolder">Check your messages and notifications</span>
+              <span class="badge rounded-1 bg-primary ms-3">
+                <i class="fa-regular fa-clock"></i> 1 week
+              </span>
+            </div>
+          </div>
+          <!-- --------------------------------------------- -->
+          <div class="d-flex align-items-center mt-1 me-3 p-2 border-start">
+            <div class="ps-2 d-flex justify-content-between pe-3" style="font-size: 18px;">
+              <span>
+                <i class="fa-solid fa-ellipsis-vertical"></i> <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+            </div>
+            <div class="d-flex align-items-center" style="font-size: 15px;">
+              <input class="form-check-input rounded-0 p-2" type="checkbox" value="" aria-label="Checkbox for following text input">
+              <span class="ms-2 fw-bolder">Let theme shine like a star</span>
+              <span class="badge rounded-1 bg-secondary ms-3">
+                <i class="fa-regular fa-clock"></i> 1 month
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-primary">Add item</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 mt-3">
+      <div class="card text-black">
+        <div class="card-body">
+          <label for="customRange1" class="form-label">Example range</label>
+          <input type="range" class="form-range" id="customRange1" value="1" min="0" max="100">
+          <span class="range-value h1 d-flex justify-content-center"></span>
+        </div>
+      </div>
+      <div class="card text-black">
+        <div class="card-body mb-3">
+          <label for="formFile" class="form-label">Input file</label>
+          <input class="form-control" type="file" id="formFile">
+        </div>
+      </div>
+      <div class="card text-black">
+        <div class="card-body mb-1">
+          <label for="exampleColorInput" class="form-label">Color picker</label>
+          <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 col-md-6 col-sm-12">
+      <div class="card text-black">
+        <div class="card-header">
+          <h6>Boarded Table</h6>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-striped-columns">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Task</th>
+                <th>Progress</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.</td>
+                <td>Update software</td>
+                <td>
+                  <div class="progress"  role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+                    <div class="progress-bar" style="width: 55%">
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge bg-danger">
+                    55%
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>2.</td>
+                <td>Clean database</td>
+                <td>
+                  <div class="progress"  role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+                    <div class="progress-bar bg-warning" style="width: 70%">
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge bg-warning">
+                    70%
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>3.</td>
+                <td>Cron job running</td>
+                <td>
+                  <div class="progress"  role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+                    <div class="progress-bar" style="width: 30%">
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge bg-primary">
+                    30%
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>4.</td>
+                <td>Fix and squish bugs</td>
+                <td>
+                  <div class="progress"  role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+                    <div class="progress-bar bg-success" style="width: 90%">
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="badge bg-success">
+                    90%
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 col-sm-6">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/photo1.webp" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>I+Love+Bootstrap ❤️</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/photo2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>I+Love+Bootstrap ❤️</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/photo3.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>I+Love+Bootstrap ❤️</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="./js/jquery.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+  <script src="./js/custom.js"></script>
+  <script>
+  
+  </script>
+</body>
+</html>

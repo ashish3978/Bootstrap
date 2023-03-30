@@ -1,0 +1,138 @@
+body{
+    overflow-x: hidden;
+}
+
+.minus{
+    cursor: pointer;
+    font-size: 20px;
+}
+.content{
+    box-shadow: 0.5px 1px 2px #d1d3d6, -0.5px 1px 2px #d1d3d6, 0.5px 1px 2px #d1d3d6;
+    display: none;
+}
+.toggle{
+  cursor: pointer;
+}
+.dash-arrow{
+  cursor: pointer;
+}
+.dash-boards{
+  display: none;
+}
+.layout-slide{
+    display: none;
+}
+.curser-pointer{
+    cursor: pointer;
+}
+#menu-bg:hover{
+    background-color: #494e53;
+}
+.charts-slide{
+    display: none;
+}
+.UI-slide{
+    display: none;
+}
+.forms-slide{
+    display: none;
+}
+.tables-slide{
+    display: none;
+}
+.mailbox-slide{
+    display: none;
+}
+.pages-slide{
+    display: none;
+}
+.extras-slide{
+    display: none;
+}
+.search-slide{
+    display: none;
+}
+.sticky{
+    /* width: 300px; */
+    /* position: sticky; */
+    /* position: fixed; */
+    top: 0;
+    /* scroll-behavior: smooth; */
+    /* position: absolute; */
+    
+}
+.navlink{
+    text-decoration: none;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #6c757d; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: grey; 
+  }
+.sidebar{
+    display: none;
+}
+.sidebar-sticky{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    float: none;
+    overflow-y: scroll;
+    z-index: 100;
+}
+/* .ml-3{
+    margin-left: 300px;
+} */
+.direct-chat{
+    box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+}
+.comment-box-1, .comment-box-2{
+    display: none;
+}
+.to-do-list{
+    box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+}
+.box-shadow{
+    box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+    
+}
+body.bg-d{
+    background-color: black;
+    color: white;
+}
+body.bg-w{
+  background-color: white;
+  color: black;
+}
+.insta{
+    animation: scale 1s infinite linear;
+}
+@keyframes scale {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+.card-2{
+    background-image: url(./images/photo1.webp);
+    background-position: center;
+}
