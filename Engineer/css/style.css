@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'oswald';
+    src: url(../fonts/Oswald-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'muli';
+    src: url(../fonts/Mulish-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ma-auto{
+    margin: 0 auto;
+}
+.font-oswald{
+    font-family: 'oswald';
+}
+.font-muli{
+    font-family: 'muli';
+}
+.menu-link{
+    color: white;
+    text-decoration: none;
+}
+.menu-link:hover{
+    color: black;
+}
+.nav-link:hover{
+    color: white;
+}
+.engineer::before{
+    content: '';
+    border-right: 40px solid #ff5e15;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -22px;
+    left: -5px;
+    z-index: -1;
+}
+::placeholder{
+    color: white;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .no-wrap{
+    flex-wrap: nowrap !important;
+  }
+
+.factory-1, .factory-2, .factory-3, .factory-4, .factory-5, .factory-6{
+    background-color: rgba(0, 0, 0, 0.484);
+    color: #ff5e15;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-right: 24px;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.factory-1 > img, .factory-2 > img, .factory-3 > img, .factory-4 > img, .factory-5 > img, .factory-6 > img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: .3s all ease;
+ }
+ .factory-1 > div, .factory-2 > div, .factory-3 > div, .factory-4 > div, .factory-5 > div, .factory-6 > div{
+    width:  100%;
+    height: 588px;
+    display: flex;
+    position: relative;
+    font-size: 24px;
+    box-sizing: border-box;
+ }
+ .con-1, .con-2, .con-3, .con-4, .con-5, .con-6{
+    top: 500px;
+    position: absolute;
+    z-index: 9;
+    left: 20px;
+    transition: .2s all ease;
+    transform: translateY(100%);
+    opacity: 1;
+    text-align: start;
+ }
+ .font-orange{
+    color: #ff5e15;
+ }
+ .font-grey{
+    color: #808080;
+ }
+ .top-btn{
+    bottom: 50px;
+    right: 50px;
+    position: fixed;
+    background-color: red;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.top-btn > i{
+    padding: 15px 16px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.blog-1{
+    overflow: hidden;
+}
+.blog-1 > img{
+    transition: .3s all ease;
+}
+.blog-2{
+    overflow: hidden;
+   }
+   .blog-2 > img{
+    transition: .3s all ease;
+}
+.blog-3{
+    overflow: hidden;
+}
+.blog-3 > img{
+    transition: .3s all ease;
+}

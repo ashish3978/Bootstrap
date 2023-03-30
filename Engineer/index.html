@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <button class="top-btn" onclick="getontop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div class="container">
+        <div class="row pt-4 pb-3 align-items-center d-sm-flex">
+            <div class="col-6 col-lg-3 p-sm-3 col-sm-12 d-flex justify-content-sm-between justify-content-md-between">
+                <img src="./Images/logo.png.webp" alt="" height="38px" width="162px">
+                <button class="navbar-toggler d-lg-none d-sm-block ps-2 pe-2 rounded-2 text-light" style="background-color: #ff5e15;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </button>
+            </div>
+            
+            <div class="col-6 col-lg-3 p-sm-3 col-sm-12 d-flex align-items-center d-sm-none d-lg-flex">
+                <i class="fa-solid fa-location-dot" style="font-size: 40px; color: #ff5e15;"></i>
+                <div class="ps-3">
+                    <h4 class="m-0 font-oswald pb-1" style="font-size: 19px;">San Francisco</h4>
+                    <span class="font-muli" style="font-size: 16px;  color: #808080;">Mountain View, Fake st., CA</span>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 p-sm-3 col-sm-12 font-oswald d-flex align-items-center d-sm-none d-lg-flex">
+                <i class="fa-solid fa-phone-volume" style="font-size: 40px; color: #ff5e15;"></i>
+                <div class="ps-3">
+                    <h4 class="m-0 font-oswald pb-1" style="font-size: 19px;">000 209 392 312</h4>
+                    <span class="font-muli" style="font-size: 16px; color: #808080;">Toll free</span>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 p-sm-3  col-sm-12 font-oswald d-flex align-items-center d-sm-none d-lg-flex">
+                <i class="fa-solid fa-envelope-open-text" style="font-size: 40px; color: #ff5e15;"></i>
+                <div class="ps-3">
+                    <h4 class="m-0 font-oswald pb-1" style="font-size: 19px;">info@gmail.com</h4>
+                    <span class="font-muli" style="font-size: 16px;  color: #808080;">Gournadi, 1230 Bariasl</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <nav class="navbar sticky-top d-sm-block navbar-expand-lg mt-4" style="background-color: #ff5e15;">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav font-oswald text-center fw-bold" style="font-size: 20px;">
+              <li class="">
+                <a class="nav-link active text-black p-4" aria-current="page" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-light p-4" aria-current="page" href="#">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-light p-4" aria-current="page" href="#">OUR PROJECTS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-light p-4" aria-current="page" href="#">TESTIMONIALS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-light p-4" aria-current="page" href="#">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-light p-4" aria-current="page" href="#">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="carouselExampleInterval" class="carousel slide bg-dark col-12" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="1000">
+            <img src="./Images/hero_1.jpg.webp" class="img-fluid d-block w-100 opacity-75" alt="...">
+            <div class="carousel-caption container m-auto top-50 font-oswald d-md-block">
+                <h1 style="font-weight: normal; font-size: 48px;">Experts and High Quality Works</h1>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./Images/hero_1.jpg.webp" class="img-fluid d-block w-100 opacity-75" alt="...">
+            <div class="carousel-caption m-auto top-50 d-md-block" >
+                <h1 style="font-weight: normal; font-size: 48px;">We Are <strong>Leading</strong> Industry of Engineers</h1>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-black rounded-3" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-black rounded-3" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <!--------------------------------------what we do--------------------------------------->
+      <div class="container">
+        <h4 class="text-center font-oswald fw-normal pt-5 mt-5" style="color: #ff5e15;">WHAT WE DO</h4>
+        <h2 class="font-oswald fw-normal text-center pt-1">We Are <strong>Leading Industry</strong> of <br> Engineering. We Love What We Do</h2>
+        <div class="row mt-5" style="padding-bottom: 80px;">
+          <div class="col-lg-3 col-md-6 border p-3 ps-5">
+            <h6 class="d-flex justify-content-end font-oswald" style="color: #dcdcdc;">01</h6>
+              <div class="engineer position-relative">
+                <img src="./Images/engineer.png" class="ms-2" height="64px" width="64px" alt="">
+              </div>
+              <div class="mt-3 pt-1">
+                <h4 class="font-oswald">Professional Team</h4>
+                h5 class="font-muli" style="color: #808080;">Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 border p-3 ps-5">
+            <h6 class="d-flex justify-content-end font-oswald" style="color: #dcdcdc;">02</h6>
+              <div class="engineer position-relative">
+                <img src="./Images/compass.png" class="ms-2" height="64px" width="64px" alt="">
+              </div>
+              <div class="mt-3 pt-1">
+                <h4 class="font-oswald">Great Ideas</h4>
+                <p class="font-muli" style="color: #808080;">Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 border p-3 ps-5">
+            <h6 class="d-flex justify-content-end font-oswald" style="color: #dcdcdc;">03</h6>
+              <div class="engineer position-relative">
+                <img src="./Images/oil-platform.png" class="ms-3" height="64px" width="64px" alt="">
+            </div>
+            <div class="mt-3 pt-1">
+              <h4 class="font-oswald">Quality Building</h4>
+              <p class="font-muli" style="color: #808080;">Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 border p-3 ps-5">
+            <h6 class="d-flex justify-content-end font-oswald" style="color: #dcdcdc;">04</h6>
+              <div class="engineer position-relative">
+                <img src="./Images/crane.png" class="ms-3" height="64px" width="64px" alt="">
+              </div>
+              <div class="mt-3 pt-1">
+                <h4 class="font-oswald">Quality Works</h4>
+                <p class="font-muli" style="color: #808080;">Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    <div style="background-color: #09162a; margin-top: 80px; padding-bottom: 120px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-6  col-lg-6 d-sm-block">
+            <img src="./Images/about_1.jpg.webp" style="margin-top: -40px" height="691px" width="540px" alt="">
+          </div>
+          <div class="col-6 font-oswald " style="padding-top: 100px; color: #ff5e15;">
+            <div>
+              <h4 class="fw-normal">WHY CHOOSE US</h4>
+              <h3 class="fw-normal text-light">More than 50 year experience in <br> industry</h3>
+              <p class="font-muli fw-normal" style="color: #808080;">Reprehenderit, odio laboriosam? Blanditiis quae ullam <br> quasi illum minima nostrum perspiciatis error <br> consequatur sit nulla.</p>
+            </div>
+            <div class="d-flex pt-5">
+                <img src="./Images/drilling-rig.png" class="text-light" style="color: white;" height="56px" width="56px" alt="">
+              <div class="ms-4 text-light">
+                <h4 class="fw-normal">Expert in Builings</h4>
+                <p class="font-muli">Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div class="d-flex pt-4">
+              <img src="./Images/compass.png" class="text-light" style="color: white;" height="56px" width="56px" alt="">
+              <div class="ms-4 text-light">
+                <h4 class="fw-normal">Modern Design</h4>
+                <p class="font-muli">Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div class="d-flex pt-4">
+              <img src="./Images/analysis.png" class="text-light" style="color: white;" height="56px" width="56px" alt="">
+              <div class="ms-4 text-light">
+                <h4 class="fw-normal">Leading In Floor Planning</h4>
+                <p class="font-muli">Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mt-5" style="margin-top: 100px;">
+          <img src="./Images/img_transparent.png.webp" alt="" class="">
+        </div>
+        <div class="col-lg-7 bg-black" style="margin-top: 100px; padding: 80px;">
+          <div class=" pb-0 ">
+            <h4 class="font-oswald fw-normal" style="color: #ff5e15;">GET A QUATE</h4>
+            <h2 class="font-oswald text-light fw-normal">Request A <strong>Quote</strong></h2>
+          </div>
+          <form>
+            <div class="row ms-1 mt-5">
+              <div class="col-md-6 ps-0 p-4">
+                <input type="text" class="bg-transparent pb-1 pe-5 text-light" style="border: none; border-bottom: 2px solid #808080; outline: none;" placeholder="Your name*">
+              </div>
+              <div class="col-md-6 ps-0 p-4">
+                <input type="text" class="bg-transparent pb-1 pe-5 text-light" style="border: none; border-bottom: 2px solid #808080; outline: none;" placeholder="Phone number">
+              </div>
+              <div class="col-md-6 ps-0 pt-0 p-4">
+                <input type="text" class="bg-transparent pb-1 pe-5 text-light" style="border: none; border-bottom: 2px solid #808080; outline: none;" placeholder="Your email*">
+              </div>
+              <div class="col-md-6 ps-0 pt-0 p-4">
+                <input type="text" class="bg-transparent pb-1 pe-5 text-light" style="border: none; border-bottom: 2px solid #808080; outline: none;" placeholder="Subject">
+              </div>
+              <div class="col-md-6 ps-0 pt-0 p-4">
+                <textarea class="bg-transparent pe-5 text-light" style="border: none; border-bottom: 2px solid #808080; outline: none;" rows="8" placeholder="Message*"></textarea>
+              </div>
+              <div class="col-md-6 ps-0 pt-0 p-4">
+                <button class="btn ps-5 rounded-0 text-white" style="background-color: #ff5e15; padding-right: 58px; margin-top: 155px;">SEND MESSAGE</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="background-color: #09162a;">
+      <div class="container" style="padding-top: 110px; margin-bottom: 180px;">
+        <div>
+          <h4 class="font-oswald fw-normal" style="color: #ff5e15;">OUR PROJECTS</h4>
+          <h2 class="font-oswald fw-normal text-light">Explore Our <strong>Recent Projects</strong></h2>
+        </div>
+        <div class="row pt-5 mt-4" >
+          <div class="swiper mySwiper" style="margin-bottom: -60px">
+            <div class="swiper-wrapper">
+              <div class="col-lg-4 swiper-slide position-relative">
+                  <div class="factory-1">
+                      <img src="./Images/works_2.jpg.webp" class="img-1">
+                      <div>
+                        <div class="font-oswald con-1">
+                            <span>Factory</span>
+                            <h3 class="text-light">Building Refinery</h3>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 swiper-slide position-relative">
+                <div class="factory-2">
+                    <img src="./Images/works_3.jpg.webp" class="img-2">
+                    <div>
+                      <div class="font-oswald con-2">
+                          <span>Factory</span>
+                          <h3 class="text-light">Building Refinery</h3>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-4 swiper-slide position-relative">
+                <div class="factory-3">
+                    <img src="./Images/works_4.jpg.webp" class="img-3">
+                    <div>
+                      <div class="font-oswald con-3">
+                          <span>Factory</span>
+                          <h3 class="text-light">Building Refinery</h3>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-4 swiper-slide position-relative">
+                <div class="factory-4">
+                    <img src="./Images/works_2.jpg.webp" class="img-4">
+                    <div>
+                      <div class="font-oswald con-4">
+                          <span>Factory</span>
+                          <h3 class="text-light">Building Refinery</h3>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-4 swiper-slide position-relative">
+                <div class="factory-5">
+                    <img src="./Images/works_3.jpg.webp" class="img-5">
+                    <div>
+                      <div class="font-oswald con-5">
+                          <span>Factory</span>
+                          <h3 class="text-light">Building Refinery</h3>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-lg-4 swiper-slide position-relative">
+                <div class="factory-6">
+                    <img src="./Images/works_4.jpg.webp" class="img-6">
+                    <div>
+                      <div class="font-oswald con-6">
+                          <span>Factory</span>
+                          <h3 class="text-light">Building Refinery</h3>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="container" style="padding: 110px 0;">
+        <div class="text-center">
+          <h4 class="font-oswald fw-normal" style="color: #ff5e15;">TESTIMONIAL</h4>
+          <h2 class="font-oswald fw-normal text-dark">What People Says</h2>
+        </div>
+        <div class="row mt-5 pt-4">
+          <div class="col-md-6">
+            <img src="./Images/person_3_sq.jpg.webp" height="100px" width="100px" class="rounded-circle" alt="">
+            <p class="font-muli h5 fw-bold lh-base">“Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Provident deleniti iusto molestias, dolore vel fugiat ab <br> placeat ea?”</p>
+            <p class="font-oswald mt-4 h5 fw-normal" style="color: #ff5e15;">MATT KEYGEN</p>
+          </div>
+          <div class="col-md-6">
+            <img src="./Images/person_4_sq.jpg.webp" height="100px" width="100px" class="rounded-circle" alt="">
+            <p class="font-muli h5 fw-bold lh-base">“Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Provident deleniti iusto molestias, dolore vel fugiat ab <br> placeat ea?”</p>
+            <p class="font-oswald mt-4 h5 fw-normal" style="color: #ff5e15;">MATT KEYGEN</p>
+          </div>
+        </div>
+      </div>
+<div style="background-color: #f8f9fa;">
+  <div class="container" style="padding: 100px 0;">
+    <div class="font-oswald">
+      <h5 class="fw-normal" style="color: #ff5e15;">BLOG</h5>
+      <h2 class="fw-normal text-dark">News & Updates</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <div class="blog-1">
+          <img src="./Images/hero_1.jpg.webp" class="img-fluid blog-img-1" height="" alt="">
+        </div>
+        <h4 class="font-oswald fw-normal pt-4">Top Companies That Are Best In <br> Industrial Business</h4>
+        <span class="font-grey">Posted by <span class="font-orange">Admin</span> In <span class="font-orange">News</span></span>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="blog-2">
+          <img src="./Images/hero_1.jpg.webp" class="img-fluid blog-img-2" height="" alt="">
+        </div>
+        <h4 class="font-oswald fw-normal pt-4">Top Companies That Are Best In <br> Industrial Business</h4>
+        <span class="font-grey">Posted by <span class="font-orange">Admin</span> In <span class="font-orange">News</span></span>
+      </div>
+      <div class="col-md-4 blog-3 col-sm-12">
+        <div class="blog-3">
+          <img src="./Images/hero_1.jpg.webp" class="img-fluid blog-img-3" height="" alt="">
+        </div>
+        <h4 class="font-oswald fw-normal pt-4">Top Companies That Are Best In <br> Industrial Business</h4>
+        <span class="font-grey">Posted by <span class="font-orange">Admin</span> In <span class="font-orange">News</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="background-color: #ff5e15;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12" style="padding: 50px 0;">
+        <h3 class="font-oswald text-light fw-normal ">SUBSCRIBE TO NEWSLETTER</h3>
+        <h6 class="text-light fw-normal font-muli lh-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, <br> reprehenderit!</h6>
+      </div>
+      <div class="col-lg-6 col-sm-12 d-flex align-items-center">
+        <input type="text" class="bg-transparent rounded-0 form-control-lg w-75" style="border: 2px solid white; outline: none; ">
+        <button class="border-0 bg-black text-white rounded-0 px-4  font-oswald" style="padding: 13px 0;">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>   
+<footer class="bg-black">
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-lg-3 col-sm-12">
+        <img src="./Images/logo2.png.webp" alt="">
+        <p class="text-light font-muli pt-4">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Beatae <br> nemo minima qui dolor, iusto iure.</p>
+        <p class="text-light font-muli">Learn More</p>
+      </div>
+      <div class="col-lg-3 col-sm-12">
+        <div class="footer-heading text-light font-oswald pb-4">
+          <span style="border-bottom: 2px solid #ff5e15;">OUR COMPANY</span>
+        </div>
+        <ul type="none" class="text-light p-0 lh-base font-muli">
+          <li class="mb-2">About</li>
+          <li class="mb-2">News</li>
+          <li class="mb-2">Services</li>
+          <li class="mb-2">Our Team</li>
+          <li class="mb-2">Careers</li>
+          <li class="mb-2">Projects</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-12">
+        <div class="footer-heading text-light font-oswald pb-4">
+          <span style="border-bottom: 2px solid #ff5e15;">OUR SERVICES</span>
+        </div>
+        <ul type="none" class="text-light p-0 lh-base font-muli">
+          <li class="mb-2">Industrial</li>
+          <li class="mb-2">Construction</li>
+          <li class="mb-2">Remodeling</li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-sm-12">
+        <div class="footer-heading text-light font-oswald pb-4">
+          <span style="border-bottom: 2px solid #ff5e15;">CONTACT</span>
+        </div>
+        <ul type="none" class="text-light p-0 lh-base font-muli">
+          <li class="mb-2">Help Center</li>
+          <li class="mb-2">Support Community</li>
+          <li class="mb-2">Press</li>
+          <li class="mb-2">FAQ</li>
+          <li class="mb-2">Our Partners</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center text-light font-muli">
+        <p style="padding: 110px 0 64px 0;">Copyright ©2023 All rights reserved | This template is made with ❤️ by Colorlib</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+ 
+
+  var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      }
+    });
+</script>
+</body>
+</html>
